@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherPractice", "CipherPractice\CipherPractice.csproj", "{BB725E45-296D-41CE-BDBC-A4C0F4858380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherPractice.test", "CipherPractice.test\CipherPractice.test.csproj", "{B6C93EE2-FF78-4ED1-AA65-0A83448BD493}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB725E45-296D-41CE-BDBC-A4C0F4858380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB725E45-296D-41CE-BDBC-A4C0F4858380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB725E45-296D-41CE-BDBC-A4C0F4858380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB725E45-296D-41CE-BDBC-A4C0F4858380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C93EE2-FF78-4ED1-AA65-0A83448BD493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C93EE2-FF78-4ED1-AA65-0A83448BD493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C93EE2-FF78-4ED1-AA65-0A83448BD493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C93EE2-FF78-4ED1-AA65-0A83448BD493}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0F373AD-0B32-4F9B-AF20-996E090D1750}
+	EndGlobalSection
+EndGlobal
