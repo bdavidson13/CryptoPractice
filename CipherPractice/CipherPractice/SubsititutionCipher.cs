@@ -5,6 +5,14 @@ using System.Text;
 
 namespace CipherPractice
 {
+                                    //TODO
+    /*****************************************************************************************
+     * Right now we only have 26 lower case characters. We can't use uppercase. I would like *
+     * to be able to use upper and lowercase characters.                                     *                                
+     *                                                                                       *
+     * Right now we don't encrypt the spaces so the length of words is evident. I would like *
+     * to encrypt spaces as well so it's just one long string                                *
+     ****************************************************************************************/
     public class SubsititutionCipher
     {
         private Dictionary<char, char> cipherKey;
