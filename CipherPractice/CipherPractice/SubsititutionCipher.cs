@@ -13,7 +13,7 @@ namespace CipherPractice
      * Right now we don't encrypt the spaces so the length of words is evident. I would like *
      * to encrypt spaces as well so it's just one long string                                *
      ****************************************************************************************/
-    public class SubsititutionCipher
+    public class SubsititutionCipher : ICipher
     {
         private Dictionary<char, char> cipherKey;
 
