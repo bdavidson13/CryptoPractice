@@ -12,6 +12,7 @@ namespace CipherPractice
             Console.WriteLine(String.Concat("Z = ", (int)'Z'));
             Console.WriteLine(String.Concat("a = ", (int)'a'));
             Console.WriteLine(String.Concat("A = ", (int)'A'));
+            Console.WriteLine(string.Concat("97 = ", (char)97));
             Console.WriteLine(String.Concat("space = ", (int)' '));
         }
     }

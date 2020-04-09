@@ -22,22 +22,94 @@ namespace CipherPractice
         }
         public string Encrypt(string message)
         {
-            foreach(var item in message.ToCharArray())
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in message.ToCharArray())
             {
                 if (isValidCharacter(item))
                 {
-
+                    if (item.IsLowerCase())
+                    {
+                        sb.Append(shiftForwardLowerCaseLetter(item, offset));
+                        continue;
+                    }
+                    if (item.IsUpperCase())
+                    {
+                        sb.Append(shiftForwardUpperCaseLetter(item, offset));
+                        continue;
+                    }
+                    sb.Append(item);
                 }
                 else
                 {
                     throw new Exception("message must be alphanumeric only");
                 }
             }
+            return sb.ToString();
         }
 
         public string Decrypt(string encryptedMessage)
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in encryptedMessage.ToCharArray())
+            {
+                if (isValidCharacter(item))
+                {
+                    if (item.IsLowerCase())
+                    {
+                        sb.Append(shiftBackwardLowerCaseLetter(item, offset));
+                        continue;
+                    }
+                    if (item.IsUpperCase())
+                    {
+                        sb.Append(shiftBackwardUpperCaseLetter(item, offset));
+                        continue;
+                    }
+                    sb.Append(item);
+                }
+                else
+                {
+                    throw new Exception("message must be alphanumeric only");
+                }
+            }
+            return sb.ToString();
+        }
+
+        private char shiftForwardLowerCaseLetter(char item, int offset)
+        {
+            int totalValue = (int)item + offset;
+            if(totalValue > 122)
+            {
+                return (char)((totalValue - 122) + 97);
+            }
+            return (char)totalValue;
+        }
+        private char shiftForwardUpperCaseLetter(char item, int offset)
+        {
+            int totalValue = (int)item + offset;
+            if (totalValue > 90)
+            {
+                return (char)((totalValue - 90) + 65);
+            }
+            return (char)totalValue;
+        }
+
+        private char shiftBackwardLowerCaseLetter(char item, int offset)
+        {
+            int totalValue = (int)item - offset;
+            if (totalValue < 97)
+            {
+                return (char)(122 - (97-totalValue));
+            }
+            return (char)totalValue;
+        }
+        private char shiftBackwardUpperCaseLetter(char item, int offset)
+        {
+            int totalValue = (int)item - offset;
+            if (totalValue < 65)
+            {
+                return (char)(65 - (90 - totalValue ));
+            }
+            return (char)totalValue;
         }
 
         private bool isValidCharacter (char character)
